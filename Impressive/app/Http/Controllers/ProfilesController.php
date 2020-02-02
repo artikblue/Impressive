@@ -14,7 +14,7 @@ class ProfilesController extends Controller
 
         //dd($user);
         $user = \App\User::find($user);
-        return view('home',[
+        return view('profiles.index',[
             'user' => $user,
         ]);
     }

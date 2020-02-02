@@ -9,7 +9,12 @@
 
         <div class = "col-9 pt-5">
             
-                <div><h1> {{ $user->username }}</h1></div>
+                <div class="d-flex justify-content-between align-items">
+                    <h1> {{ $user->profile->title ?? "not available" }}</h1>
+                
+                    <a href="#">Add new post</a>
+                </div>
+
                 <div class="d-flex">
                     <div class="pr-5"><strong>153</strong> posts</div>
                     <div class="pr-5"><strong>23k</strong> followers</div>
@@ -17,8 +22,8 @@
                 </div>
 
                 <div class="pt-4 font-weight-bold" >CodePage</div>
-                <div>Lorem ipsum dolor amet drinking vinegar truffaut pinterest bespoke actually williamsburg. Austin flexitarian readymade blog pork belly tattooed. Knausgaard hot chicken swag waistcoat</div>
-                <div><a href="#">www.lorem.com</a></div>
+                <div>{{ $user->profiel->description  ?? "not available" }}</div>
+                <div><a href="#">{{ $user->profiel->url ?? "not available" }}</a></div>
 
 
         </div>
